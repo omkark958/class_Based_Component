@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import {createRoot} from 'react-dom/client';
+import Nav from "./Nav";
+import Menu from './Menu';
+import Subscribe from "./Subscribe";
+import WatchMovies from "./WatchMovies";
+import Tv from "./Tv";
+import Download from "./Download";
+import Search from "./Search";
+import Logout from "./Logout";
+import Questions from "./Questions";
+import Footer from "./Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+createRoot(document.getElementById('nav')).render(<Nav/>);
+createRoot(document.getElementById('menu')).render(<Menu/>);
+createRoot(document.getElementById('sub')).render(<Subscribe/>)
+createRoot(document.getElementById('movies')).render(<WatchMovies/>)
+createRoot(document.getElementById('tv')).render(<Tv/>);
+createRoot(document.getElementById('download')).render(<Download/>)
+createRoot(document.getElementById('search')).render(<Search/>)
+createRoot(document.getElementById('logout')).render(<Logout/>)
+createRoot(document.getElementById('que')).render(<Questions/>)
+createRoot(document.getElementById('footer')).render(<Footer/>)
